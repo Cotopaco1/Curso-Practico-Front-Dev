@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root{
+            --very-light-pink: #c7c7c7;
+            --dark: #232830;
+            --white: #FFFFFF;
+            --text-input--field: #F7F7F7;
+            --black: #000000;
+            --hospital--green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+        .login{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .form-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 48px;
+            justify-self: center;
+            display: none;
+        }
+        
+        .form{
+            display: flex;
+            flex-direction: column;
+        }
+        label{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        input{
+            background-color: var(--text-input--field);
+            border: none;
+            border-radius: 8px;
+            height: 30px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 12px;
+        }
+        .input-email{
+            margin-bottom: 20px;
+        }
+        .primary-button{
+            background-color: var(--hospital--green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        .login-button{
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        .Forgot-password{
+            color: var(--hospital--green);
+            text-align: center;
+            text-decoration: none;
+            font-size: var(--sm);
+            margin-bottom: 50px;
+        }
+        .sign-up-button{
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--hospital--green);
+            color: var(--hospital--green);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        @media (max-width: 640px) {
+            .logo{
+                display: block;
+            }
+            
+        }
+        @media (max-width: 640px){
+            .sign-up-button{
+                position: absolute;
+                width: 300px;
+                bottom: 0;
+                margin-bottom: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+    <div class="form-container">
+        <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+
+        <form action="/" class="form">
+            <label for="email" class="Email">Email address</label>
+            <input type="text" id="email" placeholder="cotopaco@example.com" class="input input-email">
+
+            <label for="password" class="label-password">Password</label>
+            <input type="password" id="password" placeholder="*********" class="input input-password">
+
+            <input type="submit" value="Log In" class="primary-button login-button">
+            
+        </form>
+
+        <a href="./" class="Forgot-password">Forgot my password</a>
+
+        <input type="submit" value="Confirm" class="second-button sign-up-button">
+    </div>
+    </div>
+</body>
+</html>
